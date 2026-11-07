@@ -1,0 +1,21 @@
+name: Hello Workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Salomlashish
+        run: echo "Salom, GitHub Actions!"
+
+      - name: Muhit haqida malumot
+        run: |
+          echo "Repozitoriy: $GITHUB_REPOSITORY"
+          echo "Branch:      $GITHUB_REF_NAME"
+          echo "Commit:      $GITHUB_SHA"
+          echo "Ishga tushirdi: $GITHUB_ACTOR"
+          uname -a
